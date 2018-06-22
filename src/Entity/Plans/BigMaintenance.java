@@ -8,20 +8,19 @@ import java.util.ArrayList;
  * Created by Administrator on 2018/6/16.
  */
 public class BigMaintenance extends PlanDecorator {
-    Device device;
+    private Device device;
 
     public BigMaintenance(Device device) {
+        device.getPlans().add(new Plan("Big Maintenance", 60));
         this.device = device;
     }
 
-    @Override
-    public double maintenancePlan() {
-        return 0;
+    public Device getDevice() {
+        return device;
     }
 
     @Override
     public ArrayList<Plan> getPlans() {
-        device.getPlans().add(new Plan("Big Maintenance", 60));
         return device.getPlans();
     }
 }

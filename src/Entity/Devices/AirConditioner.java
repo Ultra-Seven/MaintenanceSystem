@@ -9,22 +9,10 @@ public class AirConditioner extends Device{
         this.deviceLog.setDeviceName("AirConditioner");
         this.deviceLog.setDeviceType(DeviceType.AirConditioner);
     }
+
     @Override
-    public double maintenancePlan() {
-        return 0;
+    public Device getDevice() {
+        return this;
     }
 }
 
-class AirConditioner9001 extends Pump {
-    public AirConditioner9001(String location) {
-        this.deviceLog.setModel("9001");
-        this.deviceLog.setLocation(location);
-    }
-}
-
-class AirConditioner9002 extends Pump {
-    public AirConditioner9002(String location) {
-        this.deviceLog.setModel("9002");
-        this.deviceLog.setLocation(location);
-    }
-}

@@ -34,7 +34,7 @@ public class DeviceFactory {
         return null;
     }
 
-    private Pump createElevator(String type, String location) {
+    private Elevator createElevator(String type, String location) {
         switch (type) {
             case "9001":
                 return new Elevator9001(location);
@@ -48,7 +48,7 @@ public class DeviceFactory {
         return null;
     }
 
-    private Pump createAirConditioner(String type, String location) {
+    private AirConditioner createAirConditioner(String type, String location) {
         switch (type) {
             case "9001":
                 return new AirConditioner9001(location);

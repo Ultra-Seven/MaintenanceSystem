@@ -1,5 +1,7 @@
 package Entity.Devices;
 
+import java.util.Date;
+
 /**
  * Created by Administrator on 2018/6/16.
  */
@@ -8,6 +10,11 @@ public class DeviceLog {
     private DeviceType deviceType;
     private String model;
     private String location;
+    private Date date;
+
+    public DeviceLog() {
+        date = new Date();
+    }
 
     public String getDeviceName() {
         return deviceName;
@@ -39,5 +46,9 @@ public class DeviceLog {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
